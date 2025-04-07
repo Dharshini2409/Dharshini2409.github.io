@@ -289,7 +289,13 @@ nav ul {
       nav.active ul {
         display: flex;
       }
+.contentbg h1 {
+    font-size: 1.8rem;
+  }
 
+  .contentbg p {
+    font-size: 0.95rem;
+  }
       nav ul li {
         margin: 10px 0;
         width: 100%;
