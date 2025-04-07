@@ -274,80 +274,30 @@ nav ul {
     max-height: 500px;
 }
 
-@media screen and (max-width: 480px) {
-    
-    nav {
+@media (max-width: 768px) {
+      nav ul {
         flex-direction: column;
-        align-items: center;
-        padding: 8px;
-    }
+        align-items: flex-start;
+        background: #e06377;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        display: none;
+      }
 
-    .logo {
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
+      nav.active ul {
+        display: flex;
+      }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+      nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+      }
 
-    nav ul li {
-        margin: 0;
+      .hero h1 {
+        font-size: 24px;
+      }
     }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-    .content {
-        height: 50vh;
-    }
-
-    .slide {
-        height: 50vh;
-        border: 5px solid black;
-    }
-
-    .contentbg {
-        padding: 8px;
-        border: 8px inset rgba(187, 127, 127, 0.9);
-    }
-
-    .contentbg h1 {
-        font-size: 20px;
-    }
-
-    .contentbg p {
-        font-size: 14px;
-    }
-
-   
-    .faq,
-    .address,
-    .reviews {
-        width: 90%;
-        margin: auto;
-        font-size: 14px;
-    }
-
-    .review span {
-        font-size: 16px;
-    }
-
-  
-    #why-choose-us h2 {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    #why-choose-us ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #why-choose-us ul li {
-        font-size: 16px;
-        padding: 10px 16px;
-    }
-}
