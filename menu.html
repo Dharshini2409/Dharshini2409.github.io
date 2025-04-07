@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="icon" type="image/png" href="logobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+body {
+    font-family: "Pacifico", cursive;
+    margin: 0;
+    padding: 0;
+    background: #FBE9E7;
+    color: #3E2723;
+    
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav {
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#e06377;
+    padding: 10px 17px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; 
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-right: 15px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 7px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 8px 7px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+#menu {
+    padding: 50px 20px 60px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    max-width: 1200px;
+    margin: 50px auto;
+    
+}
+#menu h2 {
+    font-size: 42px;
+    color: #BF360C; 
+    margin-bottom: 20px;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.menu-box {
+    background: #FFCCBC; 
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(62, 39, 35, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+.menu-box:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+.menu-box h3 {
+    font-size: 24px;
+    color: #5D4037;
+    margin-bottom: 10px;
+}
+.menu-box p {
+    font-size: 18px;
+    color: #3E2723; 
+}
+.menu-box p.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #D84315;
+    margin-top: 10px;
+}
+.order-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #BF360C; 
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.order-btn:hover {
+    background: #D84315; 
+    transform: scale(1.1);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #3E2723;
+    color: white;
+    margin-top: 40px;
+}
+
+
+
+    .explore-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.explore-btn {
+        background: #BF360C;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #F7B9A4;
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 6px 10px;
+        display: block;
+        width: 100%;
+    }
+
+    #menu {
+        padding: 30px 10px;
+        margin-top: 80px;
+    }
+
+    #menu h2 {
+        font-size: 30px;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr; /* Single column layout */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .menu-box {
+        padding: 15px;
+    }
+
+    .menu-box h3 {
+        font-size: 20px;
+    }
+
+    .menu-box p {
+        font-size: 16px;
+    }
+
+    .menu-box p.price {
+        font-size: 18px;
+    }
+
+    .order-btn {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .explore-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 15px;
+    }
+}
+
+    </style>
+</head>
+<body>
+   
+
+    <nav>
+        <div class="logo">Spoon & fork</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="abt.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="offers.html">Order</a></li>
+           
+            <li><a href="login.html">Login</a></li>
+
+        </ul>
+    </nav>
+    
+    
+
+   
+    <section id="menu">
+        <h2>🍽️ Our Special Menu</h2>
+        <div class="menu-container">
+            
+            
+            <div class="menu-box">
+                <h3>Hyderabadi Biryani
+                    </h3>
+                <p>A fragrant and flavorful rice dish</p>
+                <p class="price">₹299</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+
+            <div class="menu-box">
+                <h3>Chicken Biryani</h3>
+                <p>A perfect lunch</p>
+                <p class="price">₹249</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+
+            
+            <div class="menu-box">
+                <h3>Dindigul Biryani</h3>
+                <p>A tangy and spicy biryani.</p>
+                <p class="price">₹199</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+
+          
+            <div class="menu-box">
+                <h3>Mughlai Biryani</h3>
+                <p>A rich and royal biryani.</p>
+                <p class="price">₹149</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+
+            
+            <div class="menu-box">
+                <h3>Butter Chicken</h3>
+                <p>Authentic Indian creamy butter chicken.</p>
+                <p class="price">₹349</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+
+           
+            <div class="menu-box">
+                <h3>Cold Coffee</h3>
+                <p>Chilled coffee with a touch of chocolate.</p>
+                <p class="price">₹129</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+
+            
+            <div class="menu-box">
+                <h3>Paneer Tikka</h3>
+                <p>Grilled paneer cubes with Indian spices.</p>
+                <p class="price">₹299</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-box">
+                <h3>Chicken Biryani</h3>
+                <p>Flavored rice with juicy chicken pieces.</p>
+                <p class="price">₹399</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+
+          
+            <div class="menu-box">
+                <h3>Grilled Fish</h3>
+                <p>Served with lemon butter sauce.</p>
+                <p class="price">₹449</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div>
+            <div class="menu-box">
+                <h3>Mango Smoothie</h3>
+                <p>Refreshing mango smoothie with yogurt.</p>
+                <p class="price">₹179</p>
+                <a href="login.html" class="order-btn">Order Now</a>
+            </div> 
+<div class="menu-box">
+    <h3>Schezwan Noodles</h3>
+    <p>Spicy and flavorful Indo-Chinese noodles.</p>
+    <p class="price">₹229</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+
+<div class="menu-box">
+    <h3>Garlic Bread</h3>
+    <p>Toasted bread with garlic butter and herbs.</p>
+    <p class="price">₹149</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+
+<div class="menu-box">
+    <h3>Falooda</h3>
+    <p>Sweet dessert drink with ice cream and vermicelli.</p>
+    <p class="price">₹199</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+
+<div class="menu-box">
+    <h3>Mexican Tacos</h3>
+    <p>Soft tortillas filled with seasoned veggies & meat.</p>
+    <p class="price">₹299</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+
+<div class="menu-box">
+    <h3>Caesar Salad</h3>
+    <p>Fresh lettuce, croutons, and creamy dressing.</p>
+    <p class="price">₹249</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+
+<div class="menu-box">
+    <h3>Fruit Punch</h3>
+    <p>A refreshing mix of fresh fruit juices.</p>
+    <p class="price">₹179</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+
+<div class="menu-box">
+    <h3>Chicken Wings</h3>
+    <p>Spicy and crispy wings served with dip.</p>
+    <p class="price">₹349</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+
+<div class="menu-box">
+    <h3>Strawberry Milkshake</h3>
+    <p>Refreshing blend of fresh strawberries and milk.</p>
+    <p class="price">₹159</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+<div class="menu-box">
+    <h3>Mango Milkshake</h3>
+    <p>Refreshing blend of fresh mango and milk.</p>
+    <p class="price">₹159</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+
+<div class="menu-box">
+    <h3>Blueberry Milkshake</h3>
+    <p>Refreshing blend of fresh berries and ice.</p>
+    <p class="price">₹159</p>
+    <a href="login.html" class="order-btn">Order Now</a>
+</div>
+        </div>
+    </section>
+
+    <div class="explore-container">
+        <a href="moremenu.html" class="explore-btn">Explore More Menu</a>
+    </div>
+    
+
+  
+    
+
+</body>
+</html>
+

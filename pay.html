@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="icon" type="image/png" href="logobg.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(200, 117, 117);
+        }
+
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 500px;
+        }
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .pay-btn {
+            background-color: rgb(167, 97, 103);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .pay-btn:hover{
+            transform:scale(1.10);
+        }
+        .back-btn{
+            background-color: rgb(147, 80, 86);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 480px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    input, .pay-btn, .back-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>UPI Payment</h2>
+        <form id="payment-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="food-items">Food Items:</label>
+            <input type="text" id="food-items" placeholder="E.g., Pizza, Burger" required>
+
+            <label for="code">Coupon Code:</label>
+            <input type="number" id="code" placeholder="Enter coupon code" required>
+
+            <label for="total-price">Total Price (₹):</label>
+            <input type="number" id="total-price" placeholder="Enter total price" required>
+
+            <label for="upi-id">Enter UPI ID:</label>
+            <input type="text" id="upi-id" placeholder="example@upi" required>
+
+            <label for="upi-number">Enter UPI Number:</label>
+            <input type="number" id="upi-number" placeholder="1234xxxxx" required>
+
+            <label for="password">Enter Password:</label>
+            <input type="password" id="Password"  required>
+
+            <button type="submit" class="pay-btn">Pay Now</button>
+
+            <button class="back-btn" onclick="Goback()">Back</button>
+        </form>
+      
+    </div>
+   
+    <script>
+        document.getElementById("payment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            const foodItems = document.getElementById("food-items").value;
+            const totalPrice = document.getElementById("total-price").value;
+            const upiId = document.getElementById("upi-id").value;
+            const password= document.getElementById("Password").value;
+
+
+
+            if (name && foodItems && totalPrice && upiId&&password) {
+                alert("Order Placed Successfully.");
+            
+            } else {
+                alert("⚠️ Please fill all details correctly!");
+            }
+        });
+
+        function Goback()
+        {
+            window.location.href="login.html";
+        }
+    </script>
+</body>
+</html>
+

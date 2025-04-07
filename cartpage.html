@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart System</title>
+    <link rel="icon" type="image/png" href="logobg.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: auto;
+            padding: 20px;
+            background-color: #a87979;
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .cart-total {
+            margin-top: 20px;
+            font-weight: bold;
+            padding: 10px;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #c85151;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #product-list{
+            width:600px;
+            margin-left: 100px;
+        }
+
+        .submit {
+            padding: 5px 5px;
+            cursor: pointer;
+            background-color: #c85151;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            width:100px;
+            height:50px;
+        }
+        h2{
+           margin-left: 90px;
+        }
+        .back{
+            padding: 5px 5px;
+            cursor: pointer;
+            background-color: #c85151;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            width:100px;
+            height:30px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Menu</h2>
+    <div id="product-list">
+        
+        <div class="product" data-price="150">Cold Coffee - ₹50 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150"> Paneer Tikka- ₹80 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Grilled Fish - ₹150 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Mango Smoothie - ₹120 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Schezwan Noodles - ₹150 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Garlic Bread - ₹50 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Mexican Tacos - ₹60 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150"> Caesar Salad- ₹60 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150"> Chicken Wings- ₹180 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Strawberry Milkshake - ₹100 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Mango Milkshake - ₹100 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="150">Blueberry Milkshake - ₹100 <button onclick="addToCart(150)">Add to Cart</button></div>
+        <div class="product" data-price="50">Shahi Paneer Paratha - ₹50 <button onclick="addToCart(50)">Add to Cart</button></div>
+        <div class="product" data-price="60">Omelette - ₹60 <button onclick="addToCart(60)">Add to Cart</button></div>
+        <div class="product" data-price="60">French Toast - ₹60 <button onclick="addToCart(60)">Add to Cart</button></div>
+        <div class="product" data-price="30">Truffle Masala Dosa - ₹30 <button onclick="addToCart(30)">Add to Cart</button></div>
+        <div class="product" data-price="70">Waffles - ₹70 <button onclick="addToCart(70)">Add to Cart</button></div>
+        <div class="product" data-price="80">Scrambled Eggs - ₹80 <button onclick="addToCart(80)">Add to Cart</button></div>
+        <div class="product" data-price="30">Coffee - ₹30 <button onclick="addToCart(30)">Add to Cart</button></div>
+        <div class="product" data-price="40">Fresh Juice - ₹40 <button onclick="addToCart(40)">Add to Cart</button></div>
+        <div class="product" data-price="55">Smoothie - ₹55 <button onclick="addToCart(55)">Add to Cart</button></div>
+        <div class="product" data-price="60">Milkshake - ₹60 <button onclick="addToCart(60)">Add to Cart</button></div>
+        <div class="product" data-price="30">Lemonade - ₹30 <button onclick="addToCart(30)">Add to Cart</button></div>
+        <div class="product" data-price="80">Pizza - ₹80 <button onclick="addToCart(80)">Add to Cart</button></div>
+        <div class="product" data-price="100">Grilled Chicken - ₹100 <button onclick="addToCart(100)">Add to Cart</button></div>
+        <div class="product" data-price="160">Chicken Biryani - ₹160 <button onclick="addToCart(160)">Add to Cart</button></div>
+        <div class="product" data-price="190">Mutton Biryani - ₹190 <button onclick="addToCart(190)">Add to Cart</button></div>
+        <div class="product" data-price="50">Chocolate Cake - ₹50 <button onclick="addToCart(50)">Add to Cart</button></div>
+        <div class="product" data-price="40">Ice Cream - ₹40 <button onclick="addToCart(40)">Add to Cart</button></div>
+        <div class="product" data-price="60">Brownies - ₹60 <button onclick="addToCart(60)">Add to Cart</button></div>
+        <div class="product" data-price="50">Fruit Tart - ₹50 <button onclick="addToCart(50)">Add to Cart</button></div>
+        <div class="product" data-price="60">Macarons - ₹60 <button onclick="addToCart(60)">Add to Cart</button></div>
+        <div class="product" data-price="40">Muffins - ₹40 <button onclick="addToCart(40)">Add to Cart</button></div>
+        <div class="product" data-price="50">Pudding - ₹50 <button onclick="addToCart(50)">Add to Cart</button></div>
+        <div class="product" data-price="70">Tiramisu - ₹70 <button onclick="addToCart(70)">Add to Cart</button></div>
+        <div class="product" data-price="50">Soda - ₹50 <button onclick="addToCart(50)">Add to Cart</button></div>
+       
+    </div>
+    <div class="cart-total">Total: ₹<span id="total">0</span></div>
+    <div >
+        <button class="submit" onclick="changePage()">Place Order</button>
+    </div>
+    <button class="back" onclick="goBack()">Back</button>
+    
+    <script>
+        let total = 0;
+        function addToCart(price) {
+            total += price;
+            document.getElementById('total').innerText = total;
+        }
+
+        function changePage()
+        {
+            window.location.href = "pay.html";
+        }
+        function goBack()
+        {
+            window.location.href = "home.html";
+        }
+    </script>
+</body>
+</html>
+

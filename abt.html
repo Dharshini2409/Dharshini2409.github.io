@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Spoon and Fork</title>
+    <link rel="icon" type="image/png" href="logobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+   
+}
+nav {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#e06377;
+    padding: 10px 17px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-right: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #222;
+}
+
+
+
+.hero {
+    background:#e06377;
+    color: white;
+    padding: 75px 20px;
+    animation: slideInRight 1s ease-in-out;
+    
+}
+
+
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    color: rgb(239, 235, 235);
+    z-index: 1;
+}
+
+
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://i.pinimg.com/1200x/8c/b5/5a/8cb55a4d325171abf7be22bbf1cf4d5b.jpg") center/cover no-repeat;
+    filter: blur(2px) brightness(40%); 
+    z-index: -1; 
+}
+
+
+.about-box {
+    
+    padding: 20px;
+    margin: 15px 0;
+    width: 80%;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: slideInRight 1s ease-in-out;
+    border: 5px solid black;
+}
+
+
+.testimonials {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.review-box {
+    
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: slideInRight 1s ease-in-out;
+}
+
+
+.contact {
+    background: #b86573;
+    color: white;
+    padding: 20px;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.newpage {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 20px;
+            background:white;
+            color: black;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #c37e89;
+            font-size: 16px;
+          
+        }
+    
+        .newpage:hover{
+            transform: scale(1.05);
+        }
+       
+       
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.about-box:hover{
+    transform:translateX(100px);
+    transition: 2s;
+}
+.review-box:hover{
+    transform:translateX(-100px);
+    transition: 2s;
+
+}
+@media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column; 
+                align-items: center;
+            }
+            .box {
+                width: 80%;
+            }
+        }
+
+        /* Mobile (480px and below) */
+        @media screen and (max-width: 480px) {
+            .box {
+                width: 100%; 
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+   
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - Food Paradise</title>
+        <link rel="stylesheet" href="styles.css">
+        
+    </head>
+    <body>
+        <nav>
+            <div class="logo">Spoon & fork</div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="abt.html">About</a></li>
+               
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="offers.html">Order</a></li>
+               
+                <li><a href="login.html">Login</a></li>
+    
+            </ul>
+        </nav>
+    
+    
+        <section class="hero">
+            <h1>🍽 Welcome to Spoon and fork!</h1>
+            <p>Authentic Flavors, Fresh Ingredients & Unmatched Taste</p>
+        </section>
+    
+        <section class="about">
+            <div class="about-box">
+                <h2>Our Story</h2>
+                <p>Spoon and fork began with a simple mission – to serve authentic and delicious food made with love. Over the years, we have built a loyal customer base who enjoy our fresh, flavorful, and high-quality meals.</p>
+            </div>
+            
+            <div class="about-box">
+                <h2>What We Offer</h2>
+                <ul>
+                    <li>🍛 Signature Dishes – Hyderabadi Biryani, Pav Bhaji</li>
+                    <li>🥡 Dine-In, Takeaway & Home Delivery</li>
+                    
+                    <li>🏢 Daily Office Meal Plans</li>
+                </ul>
+            </div>
+    
+            <div class="about-box">
+                <h2>Why Choose Us?</h2>
+                <ul>
+                    <li>✔ Fresh & High-Quality Ingredients</li>
+                    <li>✔ Authentic & Traditional Recipes</li>
+                    <li>✔ Affordable Pricing & Best Deals</li>
+                    <li>✔ Hygiene & Safety as a Top Priority</li>
+                </ul>
+            </div>
+    
+            <div class="about-box">
+                <h2>Meet Our Team</h2>
+                <p>👨‍🍳 Head Chef: Rajesh Kumar – 10+ years in Indian & Continental Cuisine</p>
+                <p>📍 Founder: Priya Sharma – Passionate about food and flavors</p>
+            </div>
+        </section>
+
+        <section style="text-align: center; padding: 20px;">
+            <h2>Watch Our Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xPPLbEFbCAo?si=cXt6COzP4uWBRpsL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </section>
+    
+        
+    
+        <section class="contact">
+            <h2>📞 Contact Us</h2>
+            <p>📍 123 Food Street, Chennai, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉ contact@spoonandfork.com</p>
+            <p>Follow us on 🔗 Instagram | Facebook | Twitter</p>
+        </section>
+  
+    
+</body>
+</html>

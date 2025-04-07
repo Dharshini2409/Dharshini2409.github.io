@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offers</title>
+    <link rel="icon" type="image/png" href="logobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive;
+            background-color: #f8f5f2;
+            color: #333;
+        }
+        nav {
+    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#e06377;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding-right: 15px;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #222;
+}
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        
+        h1, h2 {
+            color: #b07e5d;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .offers {
+            margin-top: 50px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .offers ul {
+            list-style: none;
+            padding: 0;
+        }
+        .offers li {
+            font-size: 18px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .offers li:last-child {
+            border-bottom: none;
+        }
+        .form-link {
+            margin-top: 20px;
+        }
+        .form-link a {
+            display: inline-block;
+            background-color: #64381a;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .form-link a:hover {
+            background-color: #a84300;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            max-width: 500px;
+            margin: auto;
+        }
+        label {
+            font-size: 16px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .back-btn {
+        display: inline-block;
+        padding: 8px 15px;
+        background: #702710;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .typing {
+    display: inline-block;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #d35400; 
+    animation: typing 10s steps(30, end) forwards, blink 0.7s infinite;
+}
+
+.booking-container {
+    background: #ffcc80; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.booking-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.booking-form input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.booking-form input:focus {
+    border-color: #b57f2d; 
+}
+
+.book-btn {
+    background: #3b241d; 
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.book-btn a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+body{
+    background-color:  #e4d1d1;
+}
+.booking-container {
+        text-align: center;
+        margin: 20px auto;
+        padding: 20px;
+        background: white;
+    }
+    .booking-form {
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .book-btn {
+        background: rgb(116, 75, 44);
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .book-btn a{
+        text-decoration: none;
+    }
+    .controls {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.plans {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+
+.plan-item {
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.plan-item h3 {
+    font-size: 20px;
+    color: #444;
+}
+
+.plan-item p {
+    font-size: 14px;
+    color: #777;
+}
+.submit-btn{
+    background-color: #5e372c;
+    border-radius: 5px;
+    color:white;
+
+}
+
+.subscribe-btn{
+    background-color: #673b2f;
+    border-radius: 5px;
+    color:white;
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+    }
+
+    .offers li {
+        font-size: 16px;
+    }
+
+    .submit-btn, .book-btn {
+        width: 100%;
+        font-size: 16px;
+    }
+}
+    
+    </style>
+</head>
+<body>
+    <script>
+   function validateOrder() {
+    const name = document.getElementById("order-name").value;
+    const mail = document.getElementById("mail-id").value;
+    
+
+    if (!name) {
+        alert("❌ Please enter your name.");
+        return;
+    }
+    if (!mail) {
+        alert("❌ Please enter a valid e-mail.");
+        return;
+    }
+  
+
+    alert("🎉 Choose your menu!");
+    window.location.href = "cartpage.html";
+}
+
+
+function validateOfferForm(event) {
+    event.preventDefault(); 
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const offer = document.getElementById("offer").value;
+
+    if (!name) {
+        alert("❌ Please enter your name.");
+        return;
+    }
+    if (!email) {
+        alert("❌ Please enter your email.");
+        return;
+    }
+    if (!offer) {
+        alert("❌ Please select an offer.");
+        return;
+    }
+
+    alert("🎉 Offer Claimed Successfully!.\nYour coupon code is "+ Math.floor(1000 + Math.random() * 9000) );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".submit-btn").addEventListener("click", validateOfferForm);
+});
+
+
+    </script>
+    <nav>
+        <div class="logo">Spoon & fork</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="abt.html">About</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="offers.html">Order</a></li>
+            <li><a href="login.html">Login</a></li>
+
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h1>Offers</h1>
+
+        <p>Welcome to our food haven! We are passionate about bringing you the freshest ingredients and delicious meals that satisfy your cravings. Our journey started with a simple love for food and a desire to share it with the world</p>
+        
+        <div class="offers">
+            <h2>Exciting Offers</h2>
+            <ul>
+                <li>🎉 Get 10% Off on Your First Order!</li>
+                <li>🎁 Refer a Friend & Earn Rewards!</li>
+                <li>🌟 Seasonal & Festival Offers Available</li>
+                <li>🚚 Free Delivery on Orders Above ₹499</li>
+            </ul>
+            <div class="form-link">
+                <a href="#offers-form">Claim Your Offer</a>
+            </div>
+        </div>
+    </div>
+    
+    <form >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ><br><br>
+        
+        <label for="offer">Select Offer:</label>
+        <select id="offer" name="offer" required>
+            <option value="">-- Select an Offer --</option> 
+            <option value="10off">10% Off First Order</option>
+            <option value="referral">Referral Rewards</option>
+            <option value="festival">Seasonal & Festival Offer</option>
+            <option value="delivery">Free Delivery</option>
+        </select><br><br>
+        
+        <button class="submit-btn">Submit</button>
+    </form>
+    
+
+        <div class="booking-container">
+            <h2>Order Now</h2>
+            <div class="booking-form">
+                <input type="text" id="order-name" placeholder="Enter your name" required>
+                <input type="email" id="mail-id" placeholder="Enter your e-mail address" required>
+                
+                <button class="book-btn" onclick="validateOrder()">Order Now</button>
+            </div>
+        </div>
+
+        
+        
+       
+    </div>
+    <a href="home.html" class="back-btn"> Back</a>
+</body>
+</html>
+
+    

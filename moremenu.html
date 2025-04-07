@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu</title>
+    <link rel="icon" type="image/png" href="logobg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Dancing Script", cursive;
+            background-color: #faf4e5;
+            text-align: center;
+            padding: 20px;
+            background-color:#FAF3E0;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+    h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #554c2c;
+        }
+
+        .menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu-section {
+    width: 30%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    margin-left: 100px;
+    overflow-y: auto; 
+    max-height: 250px;
+    background: linear-gradient(to bottom, #B79891 0%,  #94716B 100%)
+}
+
+
+.breakfast, .lunch {
+    height: 250px;
+}
+
+.drinks, .desserts, .beverages {
+    height: 350px;
+}
+
+       
+        h2 {
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 0;
+            font-size: 16px;
+        }
+
+        .price {
+            float: right;
+            font-weight: bold;
+        }
+        .back-btn {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    text-align: center;
+    background-color: #8B4513; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.back-btn:hover {
+    background-color: #F7B9A4; 
+}
+
+@media screen and (max-width: 480px) {
+        h1 {
+            font-size: 28px;
+        }
+
+        .menu-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu-section {
+            width: 90%;
+            height: auto;
+            max-height: none;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        li {
+            font-size: 14px;
+        }
+
+        .price {
+            font-size: 14px;
+        }
+
+        .back-btn {
+            font-size: 14px;
+            padding: 8px 16px;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <h1>FOOD MENU</h1>
+
+    <div class="menu-container">
+        
+        <div class="menu-section breakfast">
+            <h2>🥞 Breakfast Items</h2>
+            <ul>
+            <li>Shahi Paneer Paratha<span class="price">50</span></li>
+            <li>Omelette <span class="price">60</span></li>
+            <li>French Toast <span class="price">60</span></li>
+            <li>Truffle Masala Dosa <span class="price">30</span></li>
+            <li>Waffles <span class="price">70</span></li>
+            <li>Scrambled Eggs <span class="price">80</span></li>
+            <li>Zafrani Poha  <span class="price">50</span></li>
+            <li>Nawabi Anda Bhurji  <span class="price">60</span></li>
+            <li>Avocado Toast <span class="price">70</span></li>
+            <li>Fruit Salad <span class="price">80</span></li>
+            </ul>
+        </div>
+    
+        
+        <div class="menu-section drinks">
+            <h2>🍹 Drinks</h2>
+            <ul>
+                <li>Green Tea <span class="price">20</span></li>
+            <li>Coffee <span class="price">30</span></li>
+            <li>Fresh Juice <span class="price">40</span></li>
+            <li>Smoothie <span class="price">55</span></li>
+            <li>Milkshake <span class="price">60</span></li>
+            <li>Lemonade <span class="price">30</span></li>
+            <li>Espresso <span class="price">40</span></li>
+            <li>Cappuccino <span class="price">50</span></li>
+            <li>Bubble Tea <span class="price">60</span></li>
+            <li>Cold Brew <span class="price">50</span></li>
+            </ul>
+        </div>
+    
+        
+        <div class="menu-section lunch">
+            <h2>🍕 Lunch Time</h2>
+            <ul>
+                <li>Pizza <span class="price">80</span></li>
+            <li>Grilled Chicken <span class="price">100</span></li>
+            <li>Chicken Biriyanoi <span class="price">160</span></li>
+            <li>Mutton Biriyani <span class="price">190</span></li>
+            <li>Chicken lolipop<span class="price">170</span></li>
+            <li>Club Sandwich <span class="price">60</span></li>
+            <li>Chicken Noodles <span class="price">120</span></li>
+            <li>Seafood Platter <span class="price">140</span></li>
+            <li>Vegan Wrap <span class="price">70</span></li>
+            <li>Rice Bowl <span class="price">80</span></li>
+            </ul>
+        </div>
+    
+        
+        <div class="menu-section desserts">
+            <h2>🍰 Desserts</h2>
+            <ul>
+                <li>Chocolate Cake <span class="price">50</span></li>
+                <li>Ice Cream <span class="price">40</span></li>
+                <li>Brownies <span class="price">60</span></li>
+                <li>Donuts <span class="price">30</span></li>
+                <li>Cheesecake <span class="price">70</span></li>
+                <li>Fruit Tart <span class="price">50</span></li>
+                <li>Macarons <span class="price">60</span></li>
+                <li>Muffins <span class="price">40</span></li>
+                <li>Pudding <span class="price">50</span></li>
+                <li>Tiramisu <span class="price">70</span></li>
+            </ul>
+        </div>
+    
+        
+        <div class="menu-section appetizers">
+            <h2>🍢 Appetizers</h2>
+            <ul>
+                <li>Spring Rolls <span class="price">20</span></li>
+                <li>Nachos <span class="price">20</span></li>
+                <li>Garlic Bread <span class="price">40</span></li>
+                <li>Chicken Wings <span class="price">30</span></li>
+                <li>Stuffed Mushrooms <span class="price">70</span></li>
+                <li>Bruschetta <span class="price">60</span></li>
+                <li>Onion Rings <span class="price">40</span></li>
+                <li>Calamari <span class="price">90</span></li>
+                <li>Mini Tacos <span class="price">70</span></li>
+                <li>Cheese Sticks <span class="price">50</span></li>
+            </ul>
+        </div>
+    
+       
+        <div class="menu-section beverages">
+            <h2>🥤 Beverages</h2>
+            <ul>
+                <li>Soda <span class="price">50</span></li>
+            <li>Mineral Water <span class="price">30</span></li>
+            <li>Mocktail <span class="price">70</span></li>
+            <li>Energy Drink <span class="price">50</span></li>
+            <li>Hot Chocolate <span class="price">60</span></li>
+            <li>Milk <span class="price">20</span></li>
+            <li>Herbal Tea <span class="price">30</span></li>
+            <li>Fruit Punch <span class="price">80</span></li>
+            <li>Ginger Ale <span class="price">40</span></li>
+            <li>Coconut Water <span class="price">10</span></li>
+            </ul>
+        </div>
+    </div>
+    <a href="menu.html" class="back-btn"> Back to menu page</a>
+
+
+</body>
+</html>
